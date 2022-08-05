@@ -2,7 +2,18 @@
 // it should have a dynamic name property
 // it should have a color property, that is silver by default
 // it should have a method called "say" that returns whatever string is passed in, with "*~*" at the beginning and end of the string
-
+class Unicorn {
+  constructor(sex, color = "silver") {
+    this.gender = sex;
+    this.color = color;
+  }
+  say(statement) {
+    console.log(`*~* ${statement} *~*`);
+  }
+}
+var unicorn1 = new Unicorn("sex", "blue" )
+console.log(unicorn1);
+unicorn1.say("Hi friends")
 
 
 // Write a class called Vampire
@@ -11,6 +22,22 @@
 // it should have a thirsty property, that is true by default
 // it should have a drink method. When called, the thirsty property changes to false
 
+class Vampire {
+  constructor(name, pet = "bat", thirsty = true){
+    this.name = name;
+    this.pet = pet;
+    this.thirsty = thirsty;
+  }
+  drink(){
+    this.thirsty = false;
+  }
+}
+
+var vampire1 = new Vampire("vlad")
+console.log(vampire1);
+
+vampire1.drink()
+console.log(vampire1);
 
 
 //  Write a Dragon class
@@ -18,7 +45,7 @@
 //  it should have a dynamic rider property (string)
 //  it should have a dynamic color property (string)
 //  it should have a isHungry property that is true by default
-//  it should have a eat method. If the dragon eats 4 times, it is no longer hungry
+//  it should have an eat method. If the dragon eats 4 times, it is no longer hungry
   // HINT: This requires you to use your knowledge from the conditionals lesson
 
 
